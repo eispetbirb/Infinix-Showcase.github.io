@@ -8,15 +8,33 @@
     <link rel="icon" type="image/png" href="inf spic.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 
     <style>
         body {
             font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
+            background-color: #F8F8F8;
+        }
+
+        .buy-btn {
+            transition: all 0.3s ease;
+            text-decoration: none;
+            background-color: #212529;
+        }
+
+        .buy-btn:hover {
+            background-color: #158c13;
+            text-decoration: underline;
+        }
+
+        .carousel-indicators [data-bs-target] {
+            background-color: var(--bs-secondary);
+        }
+
+        .carousel-indicators .active {
+            background-color: var(--bs-success);
         }
     </style>
 </head>
@@ -26,38 +44,67 @@
     <main class="flex-fill">
 
         <!--First nav-->
-        <nav class="navbar bg-body-tertiary">
-            <div class="container d-flex justify-content-center justify-content-lg-start">
-                <a class="navbar-brand" href="#">
+        <nav class="navbar navbar-dark bg-white">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+
+                <a class="navbar-brand ps-md-5 ps-1" href="#">
                     <img src="infinix logo.png" alt="inf logo" width="100" height="55">
                 </a>
+
+                <div class="d-flex align-items-center">
+                    <a href="index.html" class="ms-3">
+                        <img src="user.png" alt="contact" class="img-fluid rounded-circle"
+                            style="width:35px; height:35px;">
+                    </a>
+                    <a href="index.html" class="ms-3">
+                        <img src="shopping-cart.png" alt="cart" class="img-fluid rounded"
+                            style="width:35px; height:35px;">
+                    </a>
+                    <a href="index.html" class="ms-3">
+                        <img src="search.png" alt="search" class="img-fluid rounded"
+                            style="width:35px; height:35px;">
+                    </a>
+                </div>
             </div>
         </nav>
 
         <!--Second nav-->
-        <nav class="navbar navbar-expand bg-white">
+        <nav class="navbar navbar-expand bg-body-secondary sticky-top py-4">
             <div class="container d-flex justify-content-center">
                 <img src="inf titleb.png" class="img-fluid" style="max-width: 50%;" alt="inf logo">
             </div>
         </nav>
 
         <!--Vid-->
-            <div class="ratio ratio-16x9 mt-2">
-                <iframe src="https://www.youtube-nocookie.com/embed/G-e8rRxoQNI" 
-                        title="YouTube video player" 
-                        frameborder="1" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen>
-                </iframe>
-            </div>
+        <div class="ratio ratio-16x9 mt-2">
+            <iframe src="https://www.youtube-nocookie.com/embed/G-e8rRxoQNI" title="YouTube video player"
+                frameborder="1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
         </div>
 
         <!--CAROUSEL-->
         <div id="carouselExample" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+            </div>
             <div class="container my-4">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
+                        <div class="ratio ratio-16x9">
+                            <img src="specs.png" class="d-block w-100 img-fluid rounded" alt="...">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
                         <div class="ratio ratio-16x9">
                             <img src="inf 1.jpg" class="d-block w-100 img-fluid rounded" alt="...">
                         </div>
@@ -88,318 +135,403 @@
         </div>
 
         <!--SIZE AND WEIGHT-->
-        <div class="container my-4 border-top py-4">
-            <div class="row align-items-start">
-                <div class="col-md-4">
-                    <h5 class="fw-semibold mb-0">SIZE AND WEIGHT</h5>
-                </div>
-                <div class="col-md-8">
-                    <div class="col-12 col-md-8">
-                        <img src="inf size.png" alt="inf size" class="img-fluid rounded">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--SIZE AND WEIGHT-->
         <div class="container my-4 border-top border-bottom py-4">
             <div class="row align-items-start">
                 <div class="col-12 col-md-4">
                     <h5 class="fw-semibold mb-3 mb-md-0">SIZE AND WEIGHT</h5>
                 </div>
-                <div class="col-12 col-md-8">
-                    <dl class="spec-list">
-                        <dt>MODEL</dt>
-                        <dd>X6856</dd>
-                        <dt>DIMENSION</dt>
-                        <dd>163.36 x 74.53 x 7.99mm</dd>
-                        <dt>WEIGHT</dt>
-                        <dd>209g</dd>
-                        <dt>COLOUR</dt>
-                        <dd>Titanium Grey / Enchanted Purple / Racing Edition</dd>
-                    </dl>
-                    <p class="mt-2 small text-muted" style="text-align: justify;">
-                        *Product size, product weight and related specifications are theoretical values only. Actual
-                        measurements between individual products may vary. All specifications are subject to the actual
-                        product.
-                    </p>
+                <div class="col-md-8">
+                    <div class="col-12 col-md-8 mb-3">
+                        <img src="inf size.png" alt="inf size" class="img-fluid rounded">
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <dl class="spec-list">
+                            <dt>MODEL</dt>
+                            <dd>X6856</dd>
+                            <dt>DIMENSION</dt>
+                            <dd>163.36 x 74.53 x 7.99mm</dd>
+                            <dt>WEIGHT</dt>
+                            <dd>209g</dd>
+                        </dl>
+                        <p class="mt-2 small text-muted" style="text-align: justify;">
+                            *Product size, product weight and related specifications are theoretical values only. Actual
+                            measurements between individual products may vary. All specifications are subject to the
+                            actual
+                            product.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!--PLATFORM-->
-        <div class="container my-4 border-bottom py-4">
-            <div class="row align-items-start">
-                <div class="col-12 col-md-4">
-                    <h5 class="fw-semibold mb-3 mb-md-0">PLATFORM</h5>
-                </div>
-                <div class="col-12 col-md-8">
-                    <dl class="spec-list">
-                        <dt>CHIPSET</dt>
-                        <dd>MediaTek Dimensity 8350 Ultimate</dd>
-                        <dt>CPU</dt>
-                        <dd>Octa-core (4*Cortex-A510 up to 2.2Ghz & 4*Cortex-A715 up to 3.35Ghz)</dd>
-                        <dt>GPU</dt>
-                        <dd>Mali-G615 MC6</dd>
-                        <dt>PROCESS</dt>
-                        <dd>4nm</dd>
-                    </dl>
+            <!--INCLUSIONS-->
+            <div class="container my-4 border-top border-bottom py-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5 class="fw-semibold mb-3 mb-md-0">INCLUSIONS</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-6 col-lg-4 fw-semibold">
+                                <p class="mb-1">100W CHARGER</p>
+                                <p class="mb-1">EARPHONE</p>
+                                <p class="mb-1">USER GUIDE</p>
+                            </div>
+                            <div class="col-6 col-lg-4 fw-semibold">
+                                <p class="mb-1">SCREEN PROTECTOR</p>
+                                <p class="mb-1">USB TYPE-C CABLE</p>
+                                <p class="mb-1">WARRANTY CARD</p>
+                            </div>
+                            <div class="col-6 col-lg-4 fw-semibold">
+                                <p class="mb-1">PHONE CASE</p>
+                                <p class="mb-1">SIM EJECTOR</p>
+                            </div>
+                        </div>
+                        <p class="mt-2 small text-muted mb-0">*Package contents may vary by region.</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!--NETWORK-->
-        <div class="container my-4 border-bottom py-4">
-            <div class="row align-items-start">
-                <div class="col-12 col-md-4">
-                    <h5 class="fw-semibold mb-3 mb-md-0">NETWORK</h5>
+            <!--COLORS-->
+            <div class="container my-4 py-4">
+                <div class="row align-items-start">
+                    <div class="col-md-4">
+                        <h5 class="fw-semibold mb-0">COLORS</h5>
+                    </div>
+                    <div class="col-md-8">
+                        <div id="colorCarousel" class="carousel slide">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#colorExample" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#colorExample" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#colorExample" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="ratio ratio-1x1">
+                                        <img src="inf grey.png" class="d-block w-100 img-fluid rounded" alt="...">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="ratio ratio-1x1">
+                                        <img src="inf purp.png" class="d-block w-100 img-fluid rounded" alt="...">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="ratio ratio-1x1">
+                                        <img src="inf race ed.png" class="d-block w-100 img-fluid rounded" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#colorCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon bg-dark rounded-circle p-4"
+                                    aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#colorCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon bg-dark rounded-circle p-4"
+                                    aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-dark btn-lg px-5 fw-semibold rounded-pill buy-btn">
+                                Buy Now
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 col-md-8">
-                    <dl class="spec-list">
-                        <dt>TECHNOLOGY</dt>
-                        <dd>5.5G/5G/4G/3G/2G</dd>
-                        <dt>BANDWIDTH*</dt>
-                        <dd>
-                            <p style="word-wrap: break-word; white-space: normal;">
-                                2G: B2|3|5|8 / 3G: B1|2|4|5|8 / 4G: FDD B1|2|3|4|5|7|8|12|17|20|28|66 - TDD: 38|40|41|42
-                                /
-                                5G: sub6 FDD n1|3|5|7|8|12|20|28|66|71 - TDD: n38|40|41|77|78
+
+                <!--PLATFORM-->
+                <div class="container my-4 border-bottom border-top py-4">
+                    <div class="row align-items-start">
+                        <div class="col-12 col-md-4">
+                            <h5 class="fw-semibold mb-3 mb-md-0">PLATFORM</h5>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <dl class="spec-list">
+                                <dt>CHIPSET</dt>
+                                <dd>MediaTek Dimensity 8350 Ultimate</dd>
+                                <dt>CPU</dt>
+                                <dd>Octa-core (4*Cortex-A510 up to 2.2Ghz & 4*Cortex-A715 up to 3.35Ghz)</dd>
+                                <dt>GPU</dt>
+                                <dd>Mali-G615 MC6</dd>
+                                <dt>PROCESS</dt>
+                                <dd>4nm</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+
+                <!--NETWORK-->
+                <div class="container my-4 border-bottom py-4">
+                    <div class="row align-items-start">
+                        <div class="col-12 col-md-4">
+                            <h5 class="fw-semibold mb-3 mb-md-0">NETWORK</h5>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <dl class="spec-list">
+                                <dt>TECHNOLOGY</dt>
+                                <dd>5.5G/5G/4G/3G/2G</dd>
+                                <dt>BANDWIDTH*</dt>
+                                <dd>
+                                    <p style="word-wrap: break-word; white-space: normal;">
+                                        2G: B2|3|5|8 / 3G: B1|2|4|5|8 / 4G: FDD B1|2|3|4|5|7|8|12|17|20|28|66 - TDD:
+                                        38|40|41|42
+                                        /
+                                        5G: sub6 FDD n1|3|5|7|8|12|20|28|66|71 - TDD: n38|40|41|77|78
+                                    </p>
+
+                                </dd>
+                            </dl>
+                            <p class="mt-2 small text-muted" style="text-align: justify;">
+                                *Bandwidth availability and connectivity can vary depending on region and local
+                                service
+                                provider.
                             </p>
+                        </div>
+                    </div>
+                </div>
 
-                        </dd>
-                    </dl>
-                    <p class="mt-2 small text-muted" style="text-align: justify;">
-                        *Bandwidth availability and connectivity can vary depending on region and local service
-                        provider.
-                    </p>
+                <!--CAMERA-->
+                <div class="container my-4 border-bottom py-4">
+                    <div class="row align-items-start">
+                        <div class="col-12 col-md-4">
+                            <h5 class="fw-semibold mb-3 mb-md-0">CAMERA</h5>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <dl class="spec-list">
+                                <dt>REAR</dt>
+                                <dd>50MP OIS+50MP OIS+8MP</dd>
+                                <dt>FRONT</dt>
+                                <dd>32MP, f/2.2, FOV 88.9°, FF</dd>
+                                <dt>FLASH</dt>
+                                <dd>Rear Dual Flash</dd>
+                                <dt>SCENE MODES</dt>
+                                <dd>
+                                    Vlog, Video, AI Cam, Portrait, Super Night, Slow Motion, Time-Lapse, Dual Video,
+                                    Short Video, Sky Shop, Pro, Panorama, Documents, Long-exposure, AIGC Portrait,
+                                    Street
+                                    Snap
+                                </dd>
+                                <dt>VIDEO RECORDING</dt>
+                                <dd>
+                                    Front: 4K 30FPS/1080P 30FPS/
+                                    1080P 60FPS.
+                                    Rear: 4K 30FPS/4K 60FPS /1080P 30FPS/1080P 60FPS.
+                                    Slow Motion: 1080P 120FPS/1080P 240FPS
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <!--CAMERA-->
-        <div class="container my-4 border-bottom py-4">
-            <div class="row align-items-start">
-                <div class="col-12 col-md-4">
-                    <h5 class="fw-semibold mb-3 mb-md-0">CAMERA</h5>
+                <!--MEMORY-->
+                <div class="container my-4 border-bottom py-4">
+                    <div class="row align-items-start">
+                        <div class="col-12 col-md-4">
+                            <h5 class="fw-semibold mb-3 mb-md-0">MEMORY</h5>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <dl class="spec-list">
+                                <dt>ROM & RAM</dt>
+                                <dd>256GB ROM + 12GB RAM + 12GB Extended RAM</dd>
+                                <dt>TYPE</dt>
+                                <dd>UFS4.0 + LPDDR5X</dd>
+                            </dl>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 col-md-8">
-                    <dl class="spec-list">
-                        <dt>REAR</dt>
-                        <dd>50MP OIS+50MP OIS+8MP</dd>
-                        <dt>FRONT</dt>
-                        <dd>32MP, f/2.2, FOV 88.9°, FF</dd>
-                        <dt>FLASH</dt>
-                        <dd>Rear Dual Flash</dd>
-                        <dt>SCENE MODES</dt>
-                        <dd>
-                            Vlog, Video, AI Cam, Portrait, Super Night, Slow Motion, Time-Lapse, Dual Video,
-                            Short Video, Sky Shop, Pro, Panorama, Documents, Long-exposure, AIGC Portrait, Street Snap
-                        </dd>
-                        <dt>VIDEO RECORDING</dt>
-                        <dd>
-                            Front: 4K 30FPS/1080P 30FPS/
-                            1080P 60FPS.
-                            Rear: 4K 30FPS/4K 60FPS /1080P 30FPS/1080P 60FPS.
-                            Slow Motion: 1080P 120FPS/1080P 240FPS
-                        </dd>
-                    </dl>
-                </div>
-            </div>
-        </div>
 
-        <!--MEMORY-->
-        <div class="container my-4 border-bottom py-4">
-            <div class="row align-items-start">
-                <div class="col-12 col-md-4">
-                    <h5 class="fw-semibold mb-3 mb-md-0">MEMORY</h5>
+                <!--SENSOR & TOOLS-->
+                <div class="container my-4 border-bottom py-4">
+                    <div class="row align-items-start">
+                        <div class="col-12 col-md-4">
+                            <h5 class="fw-semibold mb-3 mb-md-0">SENSOR & TOOLS</h5>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <dl class="spec-list">
+                                <dt>G-SENSOR</dt>
+                                <dd>YES</dd>
+                                <dt>E-COMPASS</dt>
+                                <dd>YES</dd>
+                                <dt>GYROSCOPE</dt>
+                                <dd>YES</dd>
+                                <dt>LIGHT SENSOR</dt>
+                                <dd>YES</dd>
+                                <dt>PROXIMITY SENSOR</dt>
+                                <dd>YES</dd>
+                                <dt>FINGERPRINT</dt>
+                                <dd>YES, IN-DISPLAY FINGERPRINT</dd>
+                                <dt>MOTOR</dt>
+                                <dd>YES, X-Axis Motor</dd>
+                                <dt>INFRARED BLASTER</dt>
+                                <dd>YES</dd>
+                            </dl>
+                            <p class="mt-2 small text-muted" style="text-align: justify;">
+                                *Tested under IEC 60529 standard. Physical damage, daily wear and tear, and/or need
+                                for
+                                disassembly may cause ingress protection to deteriorate. Submersion in liquid and
+                                the
+                                resulting
+                                damage is
+                                not covered by the warranty.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 col-md-8">
-                    <dl class="spec-list">
-                        <dt>ROM & RAM</dt>
-                        <dd>256GB ROM + 12GB RAM + 12GB Extended RAM</dd>
-                        <dt>TYPE</dt>
-                        <dd>UFS4.0 + LPDDR5X</dd>
-                    </dl>
-                </div>
-            </div>
-        </div>
 
-        <!--SENSOR & TOOLS-->
-        <div class="container my-4 border-bottom py-4">
-            <div class="row align-items-start">
-                <div class="col-12 col-md-4">
-                    <h5 class="fw-semibold mb-3 mb-md-0">SENSOR & TOOLS</h5>
+                <!--MULTIMEDIA-->
+                <div class="container my-4 border-bottom py-4">
+                    <div class="row align-items-start">
+                        <div class="col-12 col-md-4">
+                            <h5 class="fw-semibold mb-3 mb-md-0">MULTIMEDIA</h5>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <dl class="spec-list">
+                                <dt>AUDIO PLAYBACK*</dt>
+                                <dd>MP3, FLAC, OGG, OGA, WAV, AAC, AMR, AWB, APE, MIDI</dd>
+                                <dt>VIDEO PLAYBACK*</dt>
+                                <dd>MP4, MKV, TS, 3GP, WEBM</dd>
+                                <dt>OTHER FEATURES</dt>
+                                <dd>Audio: Dual Speakers, JBL, Hi-Res Audio, Hi-Res Wireless Audio, DTS. Video: DRM
+                                    Widvine
+                                    L1
+                                </dd>
+                            </dl>
+                            <p class="mt-2 small text-muted" style="text-align: justify;">
+                                *Listed playback information are for reference only. Decoding formats of source
+                                files
+                                can
+                                influence playback support.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 col-md-8">
-                    <dl class="spec-list">
-                        <dt>G-SENSOR</dt>
-                        <dd>YES</dd>
-                        <dt>E-COMPASS</dt>
-                        <dd>YES</dd>
-                        <dt>GYROSCOPE</dt>
-                        <dd>YES</dd>
-                        <dt>LIGHT SENSOR</dt>
-                        <dd>YES</dd>
-                        <dt>PROXIMITY SENSOR</dt>
-                        <dd>YES</dd>
-                        <dt>FINGERPRINT</dt>
-                        <dd>YES, IN-DISPLAY FINGERPRINT</dd>
-                        <dt>MOTOR</dt>
-                        <dd>YES, X-Axis Motor</dd>
-                        <dt>INFRARED BLASTER</dt>
-                        <dd>YES</dd>
-                    </dl>
-                    <p class="mt-2 small text-muted" style="text-align: justify;">
-                        *Tested under IEC 60529 standard. Physical damage, daily wear and tear, and/or need for
-                        disassembly may cause ingress protection to deteriorate. Submersion in liquid and the resulting
-                        damage is
-                        not covered by the warranty.
-                    </p>
-                </div>
-            </div>
-        </div>
 
-        <!--MULTIMEDIA-->
-        <div class="container my-4 border-bottom py-4">
-            <div class="row align-items-start">
-                <div class="col-12 col-md-4">
-                    <h5 class="fw-semibold mb-3 mb-md-0">MULTIMEDIA</h5>
+                <!--BATTERY-->
+                <div class="container my-4 border-bottom py-4">
+                    <div class="row align-items-start">
+                        <div class="col-12 col-md-4">
+                            <h5 class="fw-semibold mb-3 mb-md-0">BATTERY</h5>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <dl class="spec-list">
+                                <dt>CAPACITY (TYP)</dt>
+                                <dd>5200mAh (TYP)</dd>
+                                <dt>CHARGING*</dt>
+                                <dd>Max 100W, 20V/5A</dd>
+                                <dt>REVERSE CHARGING*</dt>
+                                <dd>YES, Max 10W</dd>
+                            </dl>
+                            <p class="mt-2 small text-muted">
+                                *Different voltage inputs may affect maximum output power in some regions.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 col-md-8">
-                    <dl class="spec-list">
-                        <dt>AUDIO PLAYBACK*</dt>
-                        <dd>MP3, FLAC, OGG, OGA, WAV, AAC, AMR, AWB, APE, MIDI</dd>
-                        <dt>VIDEO PLAYBACK*</dt>
-                        <dd>MP4, MKV, TS, 3GP, WEBM</dd>
-                        <dt>OTHER FEATURES</dt>
-                        <dd>Audio: Dual Speakers, JBL, Hi-Res Audio, Hi-Res Wireless Audio, DTS. Video: DRM Widvine L1
-                        </dd>
-                    </dl>
-                    <p class="mt-2 small text-muted" style="text-align: justify;">
-                        *Listed playback information are for reference only. Decoding formats of source files can
-                        influence playback support.
-                    </p>
-                </div>
-            </div>
-        </div>
 
-        <!--BATTERY-->
-        <div class="container my-4 border-bottom py-4">
-            <div class="row align-items-start">
-                <div class="col-12 col-md-4">
-                    <h5 class="fw-semibold mb-3 mb-md-0">BATTERY</h5>
+                <!--CONNECTION-->
+                <div class="container my-4 border-bottom py-4">
+                    <div class="row align-items-start">
+                        <div class="col-12 col-md-4">
+                            <h5 class="fw-semibold mb-3 mb-md-0">CONNECTION</h5>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <dl class="spec-list">
+                                <dt>SIM CARD SLOT</dt>
+                                <dd>DUAL NANO SIM</dd>
+                                <dt>GPS NAVIGATION</dt>
+                                <dd>YES</dd>
+                                <dt>WIFI(WLAN)</dt>
+                                <dd>IEEE 802.11 a/b/g/n/ac/ax (WIFI 6)</dd>
+                                <dt>BLUETOOTH</dt>
+                                <dd>BLUETOOTH 5.4</dd>
+                                <dt>USB PORT</dt>
+                                <dd>USB TYPE-C</dd>
+                                <dt>OTG</dt>
+                                <dd>YES</dd>
+                                <dt>EARPHONE</dt>
+                                <dd>YES, USB TYPE-C</dd>
+                                <dt>FM</dt>
+                                <dd>YES</dd>
+                                <dt>NFC</dt>
+                                <dd>YES</dd>
+                            </dl>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 col-md-8">
-                    <dl class="spec-list">
-                        <dt>CAPACITY (TYP)</dt>
-                        <dd>5200mAh (TYP)</dd>
-                        <dt>CHARGING*</dt>
-                        <dd>Max 100W, 20V/5A</dd>
-                        <dt>REVERSE CHARGING*</dt>
-                        <dd>YES, Max 10W</dd>
-                    </dl>
-                    <p class="mt-2 small text-muted">
-                        *Different voltage inputs may affect maximum output power in some regions.
-                    </p>
-                </div>
-            </div>
-        </div>
 
-        <!--CONNECTION-->
-        <div class="container my-4 border-bottom py-4">
-            <div class="row align-items-start">
-                <div class="col-12 col-md-4">
-                    <h5 class="fw-semibold mb-3 mb-md-0">CONNECTION</h5>
+                <!--DISPLAY-->
+                <div class="container my-4 border-bottom py-4">
+                    <div class="row align-items-start">
+                        <div class="col-12 col-md-4">
+                            <h5 class="fw-semibold mb-3 mb-md-0">DISPLAY</h5>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <dl class="spec-list">
+                                <dt>SIZE</dt>
+                                <dd>6.78-INCHES</dd>
+                                <dt>SCREEN-TO-BODY RATIO</dt>
+                                <dd>93.4%</dd>
+                                <dt>REFRESH RATE</dt>
+                                <dd>60/120/144Hz</dd>
+                                <dt>RESOLUTION</dt>
+                                <dd>FHD+ 1080*2436</dd>
+                                <dt>MATERIAL</dt>
+                                <dd>AMOLED</dd>
+                                <dt>PEAK BRIGHTNESS</dt>
+                                <dd>550 nits (TYP), 1000 nits (HBM Brightness), 1300 nits (Peak Brightness)</dd>
+                                <dt>COLOR GAMUT</dt>
+                                <dd>100% DCI-P3</dd>
+                                <dt>INSTANT TOUCH SAMPLING RATE</dt>
+                                <dd>2160Hz</dd>
+                                <dt>TOUCH SAMPLING RATE</dt>
+                                <dd>UP TO 240Hz</dd>
+                                <dt>PWM DIMMING</dt>
+                                <dd>UP TO 2304Hz</dd>
+                                <dt>OTHER FEATURES</dt>
+                                <dd>Always-On Display</dd>
+                            </dl>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 col-md-8">
-                    <dl class="spec-list">
-                        <dt>SIM CARD SLOT</dt>
-                        <dd>DUAL NANO SIM</dd>
-                        <dt>GPS NAVIGATION</dt>
-                        <dd>YES</dd>
-                        <dt>WIFI(WLAN)</dt>
-                        <dd>IEEE 802.11 a/b/g/n/ac/ax (WIFI 6)</dd>
-                        <dt>BLUETOOTH</dt>
-                        <dd>BLUETOOTH 5.4</dd>
-                        <dt>USB PORT</dt>
-                        <dd>USB TYPE-C</dd>
-                        <dt>OTG</dt>
-                        <dd>YES</dd>
-                        <dt>EARPHONE</dt>
-                        <dd>YES, USB TYPE-C</dd>
-                        <dt>FM</dt>
-                        <dd>YES</dd>
-                        <dt>NFC</dt>
-                        <dd>YES</dd>
-                    </dl>
-                </div>
-            </div>
-        </div>
 
-        <!--DISPLAY-->
-        <div class="container my-4 border-bottom py-4">
-            <div class="row align-items-start">
-                <div class="col-12 col-md-4">
-                    <h5 class="fw-semibold mb-3 mb-md-0">DISPLAY</h5>
+                <!--SPLASH, WATER, & DUST RESISTANCE-->
+                <div class="container my-4 border-bottom py-4">
+                    <div class="row align-items-start">
+                        <div class="col-12 col-md-4">
+                            <h5 class="fw-semibold mb-3 mb-md-0">SPLASH, WATER, & DUST RESISTANCE</h5>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <dl class="spec-list">
+                                <dt>IP64</dt>
+                                <dd>YES</dd>
+                            </dl>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 col-md-8">
-                    <dl class="spec-list">
-                        <dt>SIZE</dt>
-                        <dd>6.78-INCHES</dd>
-                        <dt>SCREEN-TO-BODY RATIO</dt>
-                        <dd>93.4%</dd>
-                        <dt>REFRESH RATE</dt>
-                        <dd>60/120/144Hz</dd>
-                        <dt>RESOLUTION</dt>
-                        <dd>FHD+ 1080*2436</dd>
-                        <dt>MATERIAL</dt>
-                        <dd>AMOLED</dd>
-                        <dt>PEAK BRIGHTNESS</dt>
-                        <dd>550 nits (TYP), 1000 nits (HBM Brightness), 1300 nits (Peak Brightness)</dd>
-                        <dt>COLOR GAMUT</dt>
-                        <dd>100% DCI-P3</dd>
-                        <dt>INSTANT TOUCH SAMPLING RATE</dt>
-                        <dd>2160Hz</dd>
-                        <dt>TOUCH SAMPLING RATE</dt>
-                        <dd>UP TO 240Hz</dd>
-                        <dt>PWM DIMMING</dt>
-                        <dd>UP TO 2304Hz</dd>
-                        <dt>OTHER FEATURES</dt>
-                        <dd>Always-On Display</dd>
-                    </dl>
-                </div>
-            </div>
-        </div>
 
-        <!--SPLASH, WATER, & DUST RESISTANCE-->
-        <div class="container my-4 border-bottom py-4">
-            <div class="row align-items-start">
-                <div class="col-12 col-md-4">
-                    <h5 class="fw-semibold mb-3 mb-md-0">SPLASH, WATER, & DUST RESISTANCE</h5>
+                <!--OPERATING SYSTEM-->
+                <div class="container my-4 border-bottom py-4">
+                    <div class="row align-items-start">
+                        <div class="col-12 col-md-4">
+                            <h5 class="fw-semibold mb-3 mb-md-0">OPERATING SYSTEM</h5>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <dl class="spec-list">
+                                <dt>XOS 15</dt>
+                                <dd>YES</dd>
+                            </dl>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 col-md-8">
-                    <dl class="spec-list">
-                        <dt>IP64</dt>
-                        <dd>YES</dd>
-                    </dl>
-                </div>
-            </div>
-        </div>
-
-        <!--OPERATING SYSTEM-->
-        <div class="container my-4 border-bottom py-4">
-            <div class="row align-items-start">
-                <div class="col-12 col-md-4">
-                    <h5 class="fw-semibold mb-3 mb-md-0">OPERATING SYSTEM</h5>
-                </div>
-                <div class="col-12 col-md-8">
-                    <dl class="spec-list">
-                        <dt>XOS 15</dt>
-                        <dd>YES</dd>
-                    </dl>
-                </div>
-            </div>
-        </div>
 
 
     </main>
@@ -411,6 +543,8 @@
             <p class="mb-2" style="word-wrap: break-word; overflow-wrap: anywhere;">
                 Pictures from: <br>
                 https://www.yugatech.com/gadget-reviews/infinix-note-50-pro-5g-review/ <br>
+                https://wap.ph.infinixmobility.com/note-50-pro%2B-5g<br>
+                https://shopee.ph/product/292089111/28077725433?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkVlBXTnFLbGtLY21IOVhMT0xMVGhrdmVzeTZBbUJYY1R1Q25JQVg2UWt6ZWJhWDNMRVJhZ09DeXNqLzA2T3pZRUV5d2QzZGx1WXh3ZTU2NFlyZUhrRkZzdjJOM0lpN3pWeVBNaGRBUXhQdnY&gad_source=4&gad_campaignid=22282944681&gbraid=0AAAAADPpU9A4ikgdMOC1BIvZHfW90-Y6q&gclid=CjwKCAjwjffHBhBuEiwAKMb8pPND9M-GA7ppEc67H2NdMu1CQfCcYawsP_Fuk4kw7Bh0hAPCNor2vRoCViIQAvD_BwE
                 https://www.gsmarena.com/infinix_note_50_pro_arrives_with_ultrafast_charging_and_new_ai_assistant-news-67051.php<br><br>
                 Video from: <br>
                 https://www.youtube.com/watch?v=G-e8rRxoQNI
