@@ -1,0 +1,34 @@
+        .spec-list {
+            display: flex; 
+            flex-wrap: wrap; 
+            margin-bottom: 0;
+            padding-left: 12px; 
+            padding-right: 12px;
+        }
+
+        .spec-list dt,
+        .spec-list dd {
+            padding: 2px 0;
+            margin: 0; 
+        }
+
+        .spec-list dt {
+          
+            width: 50%; 
+            font-weight: 600; 
+        }
+
+        .spec-list dd {
+          
+            width: 50%;
+            padding-left: 5px; 
+        }
+
+        @media (min-width: 576px) {
+            .spec-list dt {
+                width: 33.33%; 
+            }
+            .spec-list dd {
+                width: 66.67%; 
+            }
+        }
